@@ -6,15 +6,6 @@
                 "priority": 30
             },
             {
-                "function": "powerline.segments.common.bat.battery",
-                "priority": 50,
-                "args": {
-                    "offline": "",
-                    "online": "",
-                    "format": "{ac_state}  {capacity:1.0%}"
-                }
-            },
-            {
                 "function": "powerline.segments.common.time.date",
                 "args": {
                     "format": "%Y-%m-%d "

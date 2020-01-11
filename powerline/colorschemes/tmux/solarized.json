@@ -9,7 +9,7 @@
 		"window:current":       { "fg": "solarized:base3",  "bg": "solarized:base01", "attrs": [] },
 		"window_name":          { "fg": "solarized:base3",  "bg": "solarized:base01", "attrs": ["bold"] },
 		"session":              { "fg": "solarized:base3",  "bg": "solarized:base01", "attrs": [] },
-		"session:prefix":       { "fg": "solarized:base01", "bg": "solarized:base3",  "attrs": [] }.
+		"session:prefix":       { "fg": "solarized:base01", "bg": "solarized:base3",  "attrs": [] },
         "gitstatus":                 { "fg": "gray8",           "bg": "gray2", "attrs": [] },
         "gitstatus_branch":          { "fg": "gray8",           "bg": "gray2", "attrs": [] },
         "gitstatus_branch_clean":    { "fg": "green",           "bg": "gray2", "attrs": [] },
