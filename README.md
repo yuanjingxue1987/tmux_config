@@ -57,6 +57,16 @@ POWERLINE_BASH_SELECT=1
 . {local_absolute_path_for_python_lib}/dist-packages/powerline/bindings/zsh/powerline.zsh
 ```
 
+5. add plugins for zsh (needs to add plugin name in ~/.zshrc):
+* syntax highlighting
+```
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+* auto suggestion
+```
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+```
+
 ## Note
 * if the segment changes, you need to run "powerline-daemon --replace" to reload powerline
 * recommand font for the texts: Hack
