@@ -1,6 +1,6 @@
 {
 	"common": {
-		"log_file": [["logging.FileHandler", [["/data/Downloads/powerling.log"]]]],
+		"log_file": [["logging.FileHandler", [["/var/log/powerline.log"]]]],
         "log_level": "INFO",
 		"term_truecolor": false
 	},
@@ -24,7 +24,7 @@
 		},
 		"tmux": {
 			"colorscheme": "default",
-			"theme": "yjxue"
+			"theme": "default"
 		},
 		"vim": {
 			"colorscheme": "default",

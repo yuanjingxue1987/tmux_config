@@ -14,23 +14,27 @@ sudo pip3 install powerline-status
 mkdir ~/.config/powerline
 ln -s {local_absolute_path_for_the_root_of_this_package}/config_powerline.json ~/.config/powerline/config.json
 ```
-
-5. link the tmux theme
+5. link the color schemes
 ```
-mkdir ~/.config/powerline/themes
-ln -s {local_absolute_path_for_the_root_of_this_package}/tmux ~/.config/powerline/themes/tmux
+ln -s {local_absolute_path_for_the_root_of_this_package}/colorschemes ~/.config/powerline/colorschemes
+
+6. link the themes
+```
+ln -s {local_absolute_path_for_the_root_of_this_package}/themes ~/.config/powerline/themes
 ```
 
-6. link the weather segment
+7. link the weather segment
 ```
 ln -s {local_absolute_path_for_the_root_of_this_package}/segments/weat.py /usr/local/lib/python3.7/site-packages/powerline/segments/common/weat.py
 ```
-7. config bash, append the following lines to the file '~/.bash_profile':
+8. config bash, append the following lines to the file '~/.bash_profile':
+
 ```
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 . {path_to_your_powerline_python_module}/bindings/bash/powerline.sh
 ```
-
-recommand font for the texts: Hack
+## Note
+* if the segment changes, you need to run "powerline-daemon --replace" to reload powerline
+* recommand font for the texts: Hack
