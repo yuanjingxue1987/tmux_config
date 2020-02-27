@@ -17,6 +17,7 @@ ln -s {local_absolute_path_for_the_root_of_this_package}/config_powerline.json ~
 5. link the color schemes
 ```
 ln -s {local_absolute_path_for_the_root_of_this_package}/colorschemes ~/.config/powerline/colorschemes
+```
 
 6. link the themes
 ```
