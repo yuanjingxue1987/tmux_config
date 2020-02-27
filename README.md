@@ -35,6 +35,27 @@ POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 . {path_to_your_powerline_python_module}/bindings/bash/powerline.sh
 ```
+## Switch to ZSH
+
+1. install zsh
+
+2. clone oh-my-zsh
+```
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+```
+3. link zshrc
+```
+ln -s ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc``
+```
+
+4. update ~/.zshrc, add powerline config
+```
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. {local_absolute_path_for_python_lib}/dist-packages/powerline/bindings/zsh/powerline.zsh
+```
+
 ## Note
 * if the segment changes, you need to run "powerline-daemon --replace" to reload powerline
 * recommand font for the texts: Hack
