@@ -38,6 +38,7 @@ weather_conditions_mapping = {
         'blustery': 'windy',
         'cold': 'day',
         'clouds': 'cloudy',
+        'mostly_sunny': 'mostly_sunny',
         'mostly_cloudy': 'cloudy',
         'partly_cloudy': 'cloudy',
         'mostly_clear': 'clear',
@@ -73,6 +74,7 @@ weather_conditions_icons = {
         'foggy': '',
         'sunny': '',
         'windy': '',
+        'mostly_sunny': '',
         'not_available': 'NA',
         'unknown': 'UKN'
     },
@@ -147,6 +149,6 @@ def weather(
             w.write(contents)
     return [{
             'contents': contents,
-            'highlight_groups': ['date'],
+            'highlight_groups': ['weather'],
             'divider_highlight_group': None
     }]
