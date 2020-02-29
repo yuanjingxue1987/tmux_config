@@ -24,9 +24,10 @@ ln -s {local_absolute_path_for_the_root_of_this_package}/colorschemes ~/.config/
 ln -s {local_absolute_path_for_the_root_of_this_package}/themes ~/.config/powerline/themes
 ```
 
-7. link the weather segment
+7. link the segments (custom segments)
 ```
 ln -s {local_absolute_path_for_the_root_of_this_package}/segments/weat.py /usr/local/lib/python3.7/site-packages/powerline/segments/common/weat.py
+ln -s {local_absolute_path_for_the_root_of_this_package}/segments/batt.py /usr/local/lib/python3.7/site-packages/powerline/segments/common/batt.py
 ```
 8. config bash, append the following lines to the file '~/.bash_profile':
 
