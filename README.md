@@ -47,7 +47,7 @@ git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 ```
 3. link zshrc
 ```
-ln -s ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc``
+ln -s ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 ```
 
 4. update ~/.zshrc, add powerline config
