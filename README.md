@@ -24,9 +24,10 @@ ln -s {local_absolute_path_for_the_root_of_this_package}/colorschemes ~/.config/
 ln -s {local_absolute_path_for_the_root_of_this_package}/themes ~/.config/powerline/themes
 ```
 
-7. link the weather segment
+7. link the segments (custom segments)
 ```
 ln -s {local_absolute_path_for_the_root_of_this_package}/segments/weat.py /usr/local/lib/python3.7/site-packages/powerline/segments/common/weat.py
+ln -s {local_absolute_path_for_the_root_of_this_package}/segments/batt.py /usr/local/lib/python3.7/site-packages/powerline/segments/common/batt.py
 ```
 8. config bash, append the following lines to the file '~/.bash_profile':
 
@@ -46,7 +47,7 @@ git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 ```
 3. link zshrc
 ```
-ln -s ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc``
+ln -s ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 ```
 
 4. update ~/.zshrc, add powerline config
