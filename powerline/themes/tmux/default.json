@@ -1,11 +1,5 @@
 {
     "segments": {
-        "left": [
-            {
-                "function": "powerline_gitstatus.gitstatus",
-                "priority": 80
-            }
-        ],
         "right": [
             {
                 "function": "powerline.segments.common.weat.weather",

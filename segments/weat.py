@@ -74,6 +74,7 @@ weather_conditions_icons = {
         'foggy': '',
         'sunny': '',
         'windy': '',
+        'breezy': '',
         'mostly_sunny': '',
         'not_available': 'NA',
         'unknown': 'UKN'
@@ -85,6 +86,7 @@ weather_conditions_icons = {
         'stormy': '',
         'foggy': '',
         'clear': '',
+        'breezy': '',
         'windy': '',
         'not_available': 'NA',
         'unknown': 'UKN'

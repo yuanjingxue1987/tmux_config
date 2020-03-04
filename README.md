@@ -9,28 +9,16 @@ ln -s {local_absolute_path_for_the_root_of_this_package}/.tmux.conf ~/.tmux.conf
 sudo pip3 install powerline-status
 ```
 
-4. link powerline config
+4. link powerline configs
 ```
-mkdir ~/.config/powerline
-ln -s {local_absolute_path_for_the_root_of_this_package}/config_powerline.json ~/.config/powerline/config.json
+ln -s {local_absolute_path_for_the_root_of_this_package}/powerline ~/.config/powerline
 ```
-5. link the color schemes
-```
-ln -s {local_absolute_path_for_the_root_of_this_package}/colorschemes ~/.config/powerline/colorschemes
-```
-
-6. link the themes
-```
-ln -s {local_absolute_path_for_the_root_of_this_package}/themes ~/.config/powerline/themes
-```
-
-7. link the segments (custom segments)
+5. link the segments (custom segments)
 ```
 ln -s {local_absolute_path_for_the_root_of_this_package}/segments/weat.py /usr/local/lib/python3.7/site-packages/powerline/segments/common/weat.py
 ln -s {local_absolute_path_for_the_root_of_this_package}/segments/batt.py /usr/local/lib/python3.7/site-packages/powerline/segments/common/batt.py
 ```
-8. config bash, append the following lines to the file '~/.bash_profile':
-
+6. config bash, append the following lines to the file '~/.bash_profile':
 ```
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
