@@ -9,28 +9,16 @@ ln -s {local_absolute_path_for_the_root_of_this_package}/.tmux.conf ~/.tmux.conf
 sudo pip3 install powerline-status
 ```
 
-4. link powerline config
+4. link powerline configs
 ```
-mkdir ~/.config/powerline
-ln -s {local_absolute_path_for_the_root_of_this_package}/config_powerline.json ~/.config/powerline/config.json
+ln -s {local_absolute_path_for_the_root_of_this_package}/powerline ~/.config/powerline
 ```
-5. link the color schemes
-```
-ln -s {local_absolute_path_for_the_root_of_this_package}/colorschemes ~/.config/powerline/colorschemes
-```
-
-6. link the themes
-```
-ln -s {local_absolute_path_for_the_root_of_this_package}/themes ~/.config/powerline/themes
-```
-
-7. link the segments (custom segments)
+5. link the segments (custom segments)
 ```
 ln -s {local_absolute_path_for_the_root_of_this_package}/segments/weat.py /usr/local/lib/python3.7/site-packages/powerline/segments/common/weat.py
 ln -s {local_absolute_path_for_the_root_of_this_package}/segments/batt.py /usr/local/lib/python3.7/site-packages/powerline/segments/common/batt.py
 ```
-8. config bash, append the following lines to the file '~/.bash_profile':
-
+6. config bash, append the following lines to the file '~/.bash_profile':
 ```
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
@@ -47,16 +35,10 @@ git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 ```
 3. link zshrc
 ```
-ln -s ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+ln -s {local_absolute_path_for_the_root_of_this_package}/.zshrc ~/.zshrc
 ```
 
-4. update ~/.zshrc, add powerline config
-```
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-. {local_absolute_path_for_python_lib}/dist-packages/powerline/bindings/zsh/powerline.zsh
-```
+4. update path of powerline in .zshrc
 
 5. add plugins for zsh (needs to add plugin name in ~/.zshrc):
 * syntax highlighting
@@ -65,7 +47,11 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 ```
 * auto suggestion
 ```
-git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+* 256 color
+```
+git clone https://github.com/chrissicool/zsh-256color.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-256color
 ```
 
 ## Note
