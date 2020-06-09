@@ -51,7 +51,12 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 ```
 * 256 color
 ```
-git clone https://github.com/chrissicool/zsh-256color.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-256color
+git clone https://github.com/chrissicool/zsh-256color.git ${zsh_custom:-~/.oh-my-zsh/custom}/plugins/zsh-256color
+```
+
+* load dir color db
+```
+update .zshrc, specity the right dir of the color schema db (the file named dircolors.256dark in this package)
 ```
 
 ## Note
