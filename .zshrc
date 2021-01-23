@@ -113,3 +113,5 @@ POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 . /usr/local/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
 PATH=/data/Projects/node_modules/node/bin/:$PATH
+
+eval `dircolors /data/Personal/dircolors.256dark`
