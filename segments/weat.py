@@ -86,6 +86,7 @@ weather_conditions_icons = {
         'stormy': '',
         'foggy': '',
         'clear': '',
+        'sunny': '',
         'breezy': '',
         'windy': '',
         'not_available': 'NA',
@@ -154,3 +155,4 @@ def weather(
             'highlight_groups': ['weather'],
             'divider_highlight_group': None
     }]
+
