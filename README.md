@@ -62,3 +62,4 @@ update .zshrc, specity the right dir of the color schema db (the file named dirc
 ## Note
 * if the segment changes, you need to run "powerline-daemon --replace" to reload powerline
 * recommand font for the texts: Hack
+* powerline log path: /var/log/powerline.log
