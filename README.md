@@ -4,10 +4,11 @@
 ```
 ln -s {local_absolute_path_for_the_root_of_this_package}/.tmux.conf ~/.tmux.conf
 ```
-3. install powerline:
+3. install powerline and create log file for powerline:
 ```
 sudo pip3 install powerline-status
-```
+touch /var/log/powerline.log
+sudo chmod -R 777 /var/log/powerline.log
 
 4. link powerline configs
 ```
@@ -57,6 +58,16 @@ git clone https://github.com/chrissicool/zsh-256color.git ${zsh_custom:-~/.oh-my
 * load dir color db
 ```
 update .zshrc, specity the right dir of the color schema db (the file named dircolors.256dark in this package)
+
+6. install powerline-gitstatus
+```
+sudo pip3 install powerline-gitstatus
+```
+```
+7. set zsh as your default shell
+```
+sudo chsh -s /bin/zsh <my username>
+```
 ```
 
 ## Note
