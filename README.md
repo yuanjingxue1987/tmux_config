@@ -66,7 +66,7 @@ sudo pip3 install powerline-gitstatus
 ```
 7. set zsh as your default shell
 ```
-sudo chsh -s /bin/zsh <my username>
+sudo chsh -s /bin/zsh {my username}
 ```
 ```
 
