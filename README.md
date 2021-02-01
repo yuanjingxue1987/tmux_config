@@ -63,11 +63,9 @@ update .zshrc, specity the right dir of the color schema db (the file named dirc
 ```
 sudo pip3 install powerline-gitstatus
 ```
-```
 7. set zsh as your default shell
 ```
 sudo chsh -s /bin/zsh {my username}
-```
 ```
 
 ## Note
