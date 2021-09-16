@@ -9,6 +9,7 @@ ln -s {local_absolute_path_for_the_root_of_this_package}/.tmux.conf ~/.tmux.conf
 sudo pip3 install powerline-status
 touch /var/log/powerline.log
 sudo chmod -R 777 /var/log/powerline.log
+```
 
 4. link powerline configs
 ```
