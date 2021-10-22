@@ -30,6 +30,9 @@ POWERLINE_BASH_SELECT=1
 ## Switch to ZSH
 
 1. install zsh
+```
+sudo apt install zsh
+```
 
 2. clone oh-my-zsh
 ```
@@ -59,6 +62,7 @@ git clone https://github.com/chrissicool/zsh-256color.git ${zsh_custom:-~/.oh-my
 * load dir color db
 ```
 update .zshrc, specity the right dir of the color schema db (the file named dircolors.256dark in this package)
+```
 
 6. install powerline-gitstatus
 ```
