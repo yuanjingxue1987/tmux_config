@@ -70,6 +70,7 @@ ZSH_THEME="avit"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 git
+git-prompt
 zsh-syntax-highlighting
 zsh-autosuggestions
 zsh-256color
@@ -108,10 +109,16 @@ export LS_COLORS
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 alias vim='nvim'
+alias python='python3'
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
-. /usr/local/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
-PATH=/data/Projects/node_modules/node/bin/:$PATH
+.  /usr/local/lib/python3.10/dist-packages/powerline/bindings/zsh/powerline.zsh
+path=(
+    $path,
+    /home/linuxbrew/.linuxbrew/bin
+)
 
-eval `dircolors /data/Personal/dircolors.256dark`
+# eval `dircolors /data/Personal/dircolors.256dark`
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

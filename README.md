@@ -71,8 +71,14 @@ sudo pip3 install powerline-gitstatus
 7. set zsh as your default shell
 ```
 sudo chsh -s /bin/zsh {my username}
-```
 
+8. install tmux plugin manager
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+tmux source ~/.tmux.conf
+
+9. Press prefix + I to in tmux to install plugins
+`
 ## Note
 * if the segment changes, you need to run "powerline-daemon --replace" to reload powerline
 * recommand font for the texts: Hack
