@@ -20,7 +20,7 @@ ln -s {local_absolute_path_for_the_root_of_this_package}/powerline ~/.config/pow
 ln -s {local_absolute_path_for_the_root_of_this_package}/segments/weat.py /usr/local/lib/python3.7/site-packages/powerline/segments/common/weat.py
 ln -s {local_absolute_path_for_the_root_of_this_package}/segments/batt.py /usr/local/lib/python3.7/site-packages/powerline/segments/common/batt.py
 ```
-6. config bash, append the following lines to the file '~/.bash_profile':
+6. config bash, append the following lines to the file '~/.bash_profile', skip if you are using zsh:
 ```
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
@@ -38,6 +38,7 @@ sudo apt install zsh
 ```
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 ```
+
 3. link zshrc
 ```
 ln -s {local_absolute_path_for_the_root_of_this_package}/.zshrc ~/.zshrc
@@ -71,11 +72,13 @@ sudo pip3 install powerline-gitstatus
 7. set zsh as your default shell
 ```
 sudo chsh -s /bin/zsh {my username}
+```
 
 8. install tmux plugin manager
 ```
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source ~/.tmux.conf
+```
 
 9. Press prefix + I to in tmux to install plugins
 `

@@ -113,12 +113,89 @@ alias python='python3'
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
-.  /usr/local/lib/python3.10/dist-packages/powerline/bindings/zsh/powerline.zsh
+POWERLINE_CONFIG_COMMAND=/Users/yuanjingxue/miniconda3/bin/powerline-config
+POWERLINE_COMMAND=/Users/yuanjingxue/miniconda3/bin/powerline
+.  /Users/yuanjingxue/miniconda3/lib/python3.11/site-packages/powerline/bindings/zsh/powerline.zsh
 path=(
+    /Users/yuanjingxue/miniconda3/bin,
+    /use/local/bin,
     $path,
-    /home/linuxbrew/.linuxbrew/bin
+    #/home/linuxbrew/.linuxbrew/bin
 )
 
-# eval `dircolors /data/Personal/dircolors.256dark`
+# eval `dircolors /Users/yuanjingxue/configs/tmux_config/dircolors.256dark
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# StoryTell config
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/yuanjingxue/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/yuanjingxue/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/yuanjingxue/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/yuanjingxue/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/yuanjingxue/configs/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/yuanjingxue/configs/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/yuanjingxue/configs/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/yuanjingxue/configs/google-cloud-sdk/completion.zsh.inc'; fi
+
+alias os="open -a SourceTree"
+alias og="open -a Github\ Desktop ."
+function conda_activate {
+    echo "Switching to $1"
+    if [ "$1" = "storytell" ]; then
+        cd ~/projects/$1 && conda activate ./env
+    else
+        cd ~/projects/$1/backend && conda activate ./env
+    fi
+}
+
+alias ca=conda_activate
+alias gr='git rebase'
+alias gco='git checkout'
+alias gp='git push'
+alias gb='git branch'
+alias finder='open -a finder'
+alias tgs='tig status'
+alias eb='vim ~/.zshrc'
+alias sb='source ~/.zshrc'
+alias server='ssh home'
+
+
+# StoryTell Development
+alias fls='gsutil ls'
+alias fcp='gsutil cp'
+alias fmv='gsutil mv'
+alias st_ssh='/Users/jing/projects/storytell/tools/ssh.py'
+alias mvim='open -a MacVim'
+
+
+alias ct="date '+%Y-%m-%d %X %A' | pbcopy"
+alias ssh_tasks='gcloud compute ssh storytell@storytell-scheduled-tasks --zone=us-west1-b'
+
+function start_jupyter {
+	PORT=8888
+	export JUPYTER=./env/bin/jupyter
+	export PYTHONPATH=~/projects:$PYTHONPATH
+	export GOOGLE_APPLICATION_CREDENTIALS=~/gcloud_auth/432400780835-compute.json
+
+	$JUPYTER serverextension enable --py jupyter_http_over_ws
+
+	$JUPYTER notebook \
+	  --NotebookApp.allow_origin='https://colab.research.google.com' \
+	  --port=$PORT \
+	  --NotebookApp.port_retries=0 \
+	  --ip='0.0.0.0' \
+	  --no-browser
+}
