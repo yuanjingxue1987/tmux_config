@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/home/yuanjingx/downloads/ngc-cli:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -108,25 +108,33 @@ LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=
 export LS_COLORS
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
-if [ -f $HOME/.venv/lib/python3.12/site-packages/powerline/bindings/zsh/powerline.zsh ]; then
+if [ -f $HOME/dev_environment/venv/lib/python3.12/site-packages/powerline/bindings/zsh/powerline.zsh ]; then
   POWERLINE_BASH_CONTINUATION=1
   POWERLINE_BASH_SELECT=1
-  POWERLINE_CONFIG_COMMAND=/Users/yuanjingx/.venv/bin/powerline-config
-  POWERLINE_COMMAND=/Users/yuanjingx/.venv/bin/powerline
-  /Users/yuanjingx/.venv/bin/powerline-daemon -q
-  source $HOME/.venv/lib/python3.12/site-packages/powerline/bindings/zsh/powerline.zsh
+  POWERLINE_CONFIG_COMMAND=$HOME/dev_environment/venv/bin/powerline-config
+  POWERLINE_COMMAND=$HOME/dev_environment/venv/bin/powerline
+  $HOME/dev_environment/venv/bin/powerline-daemon -q
+  source $HOME/dev_environment/venv/lib/python3.12/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
 
 alias vim='nvim'
-alias python='python3'
+alias tc-ss='trt-cloud sweep status --show-trials'
+alias tc-sr='trt-cloud sweep results'
 
-
-path=(
-    /use/local/bin,
-    $path,
+path+=(
+    /usr/local/bin
+    /usr/local/go/bin
     #/home/linuxbrew/.linuxbrew/bin
 )
 
 # eval `dircolors /Users/yuanjingxue/configs/tmux_config/dircolors.256dark
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export GIT_TRT_ROOT="/home/yuanjingx/works/trt-infra/git-trt"
+export PATH="/home/yuanjingx/.local/bin:$GIT_TRT_ROOT/bin:$PATH"
+export MANPATH="$GIT_TRT_ROOT/man:$MANPATH"
+
+export PYENV_ROOT="$HOME/works/tmp/test_pyenv/pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+command -v pyenv >/dev/null && eval "$(pyenv init - zsh)"
